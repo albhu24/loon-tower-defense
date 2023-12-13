@@ -1,0 +1,57 @@
+{
+  "name": "loon-tower-defense",
+  "version": "1.0.0",
+  "description": "Pronto AI take home coding challenge - a single player tower defense game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "webpack-dev-server",
+    "server": "nodemon src/server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albhu24/loon-tower-defense.git"
+  },
+  "author": "Albert Hu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/albhu24/loon-tower-defense/issues"
+  },
+  "homepage": "https://github.com/albhu24/loon-tower-defense#readme",
+  "dependencies": {
+    "@babel/core": "^7.23.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.1.3",
+    "react-router": "^6.16.0",
+    "socket.io": "^4.7.2",
+    "socket.io-client": "^4.7.2",
+    "styled-components": "^6.1.1",
+    "ws": "^8.14.2"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.22.20",
+    "@babel/preset-react": "^7.22.15",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.11",
+    "babel-loader": "^9.1.3",
+    "concurrently": "^6.5.1",
+    "css-loader": "^6.8.1",
+    "dotenv-webpack": "^8.0.1",
+    "html-webpack-plugin": "^5.5.3",
+    "mini-css-extract-plugin": "^2.7.6",
+    "nodemon": "^3.0.1",
+    "prettier": "3.0.3",
+    "react-refresh": "^0.14.0",
+    "sass": "^1.68.0",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "tailwindcss": "^3.3.3",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
