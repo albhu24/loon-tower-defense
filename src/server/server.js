@@ -38,7 +38,7 @@ wss.on("connection", function connection(ws) {
         if (state.totalWaveAlive <= 0) {
           clearInterval(spawnInterval);
         }
-        if (state.totalWaveAlive <= 10) {
+        if (state.totalWaveAlive <= 9) {
           addLoon(state);
           updateLoon(state);
         } else {
@@ -46,7 +46,7 @@ wss.on("connection", function connection(ws) {
         }
         ws.send(JSON.stringify(state));
         console.log(state);
-      }, 5000);
+      }, 500);
     }
     if (msg.subscribe === "msg") {
       ws.send(
@@ -60,6 +60,7 @@ wss.on("connection", function connection(ws) {
         const loonID = msg.publish.killLoon.loonID;
         for (const s in state.loonState) {
           if (s === loonID) {
+            // state.loonState.alive = false;
             delete state.loonState[s];
             state.totalWaveAlive -= 1;
             console.log(s, "loonID");

@@ -33,9 +33,13 @@ const Canvas = ({ loons, setLoons }) => {
         socket.send(
           JSON.stringify({ publish: { killLoon: { loonID: nearestLoonId } } })
         );
+
         const updatedLoons = { ...loons };
         delete updatedLoons[nearestLoonId];
+        console.log(updatedLoons);
+        console.log("LOON DIED");
         // Send a message here to server to delete Loon
+
         setLoons(updatedLoons);
       }
     });
@@ -45,7 +49,9 @@ const Canvas = ({ loons, setLoons }) => {
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
     ctx.fillStyle = "red";
     for (const l in loons) {
-      ctx.fillRect(loons[l].x_position, loons[l].y_position, 10, 10);
+      if (loons[l].alive === true) {
+        ctx.fillRect(loons[l].x_position, loons[l].y_position, 10, 10);
+      }
     }
   };
 
@@ -112,9 +118,9 @@ const Canvas = ({ loons, setLoons }) => {
     const render = () => {
       drawLoon(context);
       drawTurrets(context);
-      popNearestLoon();
       requestAnimationFrame(render);
     };
+    popNearestLoon();
 
     render();
 
