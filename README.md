@@ -1,11 +1,11 @@
-Instructions for deploying locally:
+**Instructions for deploying locally:**
 
-Assuming Node is installed, npm install first, then npm run all to run both server and client.
-Navigate to localhost:8080 to run app
+Assuming Node is installed, **npm install** first, then **npm run all** to run both server and client.
+Navigate to **localhost:8080** to run app
 
-4.  Discuss potential bugs or exploits with either the game mechanics or the RPC interface. How can we make it more robust? How would you improve the overall architecture?
+**Discuss potential bugs or exploits with either the game mechanics or the RPC interface. How can we make it more robust? How would you improve the overall architecture?**
 
-Section 4 - Response
+**Response**
 
 Security- To enhance security, we could implement a WSS protocol which ensures encrypted communication and preventing unauthorized acceess. Additionally we could implement authentication and authorization so we can ensure that only authorized individuals may access the the services of the game.
 
