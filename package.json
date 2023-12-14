@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "webpack-dev-server",
-    "server": "nodemon src/server/server.js"
+    "server": "nodemon src/server/server.js",
+    "all": "concurrently \"npm run server\" \"npm run serve\""
   },
   "repository": {
     "type": "git",
